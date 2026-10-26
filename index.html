@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+   BIRTHDAY WEBSITE  -  cover, letter, poem
+  ============================================================
+   HOW TO USE
+   1. Replace the "[ ... ]" placeholders in the LETTER slide
+      with your own words. The cover and the poem are already
+      written; edit them freely.
+   2. Poem: one <div class="stanza"> per verse, one
+      <span class="line reveal"> per line.
+   3. If you write in Arabic, change  dir="ltr"  to  dir="rtl"
+      on the <html> tag below. The slideshow then moves
+      right-to-left.
+   4. Music (optional): put an mp3 in a "music" folder and set
+      the src of <audio id="bgm"> at the bottom of this file.
+  ============================================================
+-->
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Birthday, Imane</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Cairo:wght@300;400;600&family=Cormorant+Garamond:ital,wght@0,400;1,400;1,600&family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- background layers -->
+  <div class="glow" aria-hidden="true"></div>
+  <div class="moon" aria-hidden="true"></div>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <!-- music button (hidden automatically if no audio src is set) -->
+  <button class="music-btn" id="musicBtn" aria-label="Toggle music" hidden>
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+  </button>
+
+  <main class="viewport">
+    <div class="track" id="track">
+
+      <!-- ===================== 1. COVER ===================== -->
+      <section class="slide" data-glow="rgba(150,170,255,.28)">
+        <div class="slide-inner">
+          <p class="eyebrow reveal">Happy Birthday</p>
+          <h1 class="reveal">Ma Princess ,Imane</h1>
+          <p class="lead reveal">A little gift, written just for you.</p>
+          <button class="btn reveal" data-next>Press to take my little gift</button>
+        </div>
+      </section>
+
+      <!-- ===================== 2. LETTER ===================== -->
+      <section class="slide" data-glow="rgba(200,212,255,.24)">
+        <div class="slide-inner">
+          <p class="eyebrow reveal"> A letter for my precious flower </p>
+          <h2 class="reveal">Words in my heart</h2>
+          <div class="letter reveal">
+            <p>Dear Imane, </p>
+            <p>Happy birthday Imane, The day you were born was the brightest day the earth saw as a new sun came to life ,Today the princess became a queen , Today the flower blooms and the angel shines bright ,Happy 18th Birthday!!,
+               Since the day i first met you i knew you were diffirent , You had your charm your aura as they say ,I never thought i would talk to you for that much or that i will get
+              attached to you that much ,But fate was kind enought to make our paths cross , I wasn't the best and i did you horrible many times but i swear i never had such intention to hurt you , I can describe how much you are or how many things i 
+              like about you but i'll try my best, I love how you dress even if you thought it was normal i stil think its amazing,I love how you do your make up even if it wasn't alot it looked
+              out of this world, I love how you luagh it always makes me smile when i hear it , Its magical, i love how you write , Even if it wasn't that polished or the best
+              piece of litereture i still think its the best i have seen , I love how you draw even if you thought it has some flaws its perfect for me ,and even if i don't know your smell 
+              , your true voice your full appearance or the warmth of your hands but iam sure i will love every one of them ,
+              I admire you Imane ,No matter how many times i say it i want to say it more , I will always be there for you and protect you for as long and as much as i can,Whatever happens in the future .</p>
+            <p class="signature">Yours Nounour</p>
+            <figure class="letter-photo">
+  <img src="20260927003304.png" alt="Us">
+  <figcaption>a memory to last</figcaption>
+</figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== 3. POEM + FINALE ===================== -->
+      <section class="slide" id="finale" data-finale data-glow="rgba(200,212,255,.3)">
+        <div class="slide-inner wide">
+          <p class="eyebrow reveal">A poem for my princess who became a queen</p>
+          <h2 class="reveal">The Queen</h2>
+          <div class="poem">
+            <div class="stanza">
+              <span class="line reveal">There once was a princess, one that was precious and rare</span>
+              <span class="line reveal">No one dared to get close, as they feared her stare</span>
+              <span class="line reveal">A boy got close without a clue at all</span>
+              <span class="line reveal">The princess smiled and let down her wall.</span>
+            </div>
+            <div class="stanza">
+              <span class="line reveal">He saw she was soft as a delicate flower</span>
+              <span class="line reveal">Ambitious and bright, growing stronger each hour</span>
+              <span class="line reveal">So beautiful, kind, working hard through the day</span>
+              <span class="line reveal">She chased after dreams in her own brilliant way.</span>
+            </div>
+            <div class="stanza">
+              <span class="line reveal">Nobody knows just how or when</span>
+              <span class="line reveal">But the two of them grew closer then.</span>
+              <span class="line reveal">And the bright little princess became a queen</span>
+              <span class="line reveal">With the kindest soul he has ever seen.</span>
+            </div>
+            <div class="stanza">
+              <span class="line reveal">The boy tried to be a poet, he was terrible and he knew it.</span>
+              <span class="line reveal">The queen knows too, but she lets him show it.</span>
+            </div>
+            <div class="stanza">
+              <span class="line reveal">As life goes on, their bond grows strong,</span>
+              <span class="line reveal">and whatever may come, they will still belong,</span>
+              <span class="line reveal">like the sun and the moon sharing one sky,</span>
+              <span class="line reveal">neither one will ever say goodbye.</span>
+            </div>
+          </div>
+          <p class="happy reveal">Happy Birthday, Imane</p>
+          <button class="btn ghost reveal" id="celebrate">Celebrate</button>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- navigation -->
+  <button class="nav prev" id="prev" aria-label="Previous">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <button class="nav next" id="next" aria-label="Next">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+
+  <footer class="footbar">
+    <div class="progress"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="dots" id="dots"></div>
+    <span class="counter" id="counter">1 / 1</span>
+  </footer>
+
+  <!-- optional background music: set src="music/song.mp3" -->
+  <audio id="bgm" loop preload="none" src=""></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
